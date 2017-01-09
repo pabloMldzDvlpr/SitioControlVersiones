@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- META -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title></title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,900,300,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic" rel="stylesheet">
  
   </head>
-  <body>
+  <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
     <!-- ======================== HOME ======================== -->
-    <div class="container">
-      <section id="home">
-          <div class="container">
-            
-            <div class="row inner">
-              <div class="col-lg-10 center-block text-center">
-                <header>
-                  <h1>Sección 1</h1>
-                  <p>Documentación, código y herramientas para utilizar GitHub</p>
-                </header>
-              </div>
-            </div>
-
+    
+    <div id="navbar-main"> 
+      <!-- Navbar -->
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a class="navbar-brand" href="#home">Curso GIT</a> </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#home" class="smoothScroll">Inicio</a></li>
+              <li> <a href="#instalation" class="smoothScroll"> Instalación</a></li>
+              <li> <a href="#code" class="smoothScroll"> Códigos</a></li>
+              <li> <a href="#tool" class="smoothScroll"> Herramientas</a></li>
+              <li> <a href="#doc" class="smoothScroll"> Doc</a></li>
+              <li> <a href="#participants" class="smoothScroll"> Participantes</a></li>
+              <li> <a href="#contact" class="smoothScroll"> Contacto</a></li>
+            </ul>
           </div>
-      </section>
+        </div>
+      </div>
+      <!-- END Navbar --> 
     </div>
+
     <!-- ======================== END / HOME ======================== -->
 
   </body>
