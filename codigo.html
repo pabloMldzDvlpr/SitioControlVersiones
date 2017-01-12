@@ -10,12 +10,30 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="js/bootstrap.js"></script>
 </head>
-
+<style>
+#Titulo
+    {
+    text-align:center;
+    text-decoration:bold;
+    }
+hr  {
+    width:70%;
+    }
+#sub-titulo
+    {
+    text-align:center;
+    }
+.container
+    {
+    font-size:16px;
+    }
+</style>
 <body>
-<!-- ====================================== CODIGO ======================================== -->
-<div style="text-align:center">
-  <h2>Comandos Git</h2>
-  <p>En esta seccion se encuentra una lista con los comandos necesarios para utilizar git,:</p>
+<!--====================================== CODIGO ========================================-->
+<div>
+  <h2 id="Titulo" >Comandos Git</h2>
+  <hr>
+  <p id="sub-titulo">En esta seccion se encuentra una lista con los comandos necesarios para utilizar git:</p>
 </div>
 <div class="container-fluid">
 <div class="container"> 
@@ -52,19 +70,19 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-4"><li>git log --oneline --decorate</li></div><div clas="clo-sm-8">Muestra todos los commits(versiones) que se han realizado al directorio.</div>
+                    <div class="col-sm-4"><li>git log --oneline --decorate</li></div><div clas="col-sm-8">Muestra todos los commits(versiones) que se han realizado al directorio.</div>
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-4"><li>git diff [codigocommit1] [codigocommit2]</li></div><div clas="clo-sm-8">Permite ver los cambios realizados al directorio entre las 2 versiones especificadas</div>
+                    <div class="col-sm-4"><li>git diff [codigocommit1] [codigocommit2]</li></div><div clas="col-sm-8">Permite ver los cambios realizados al directorio entre las 2 versiones especificadas</div>
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-4"><li>git config --global user.mail mail |.name name</li></div><div clas="clo-sm-8">Cambia el nombre mostrado como autor y correo de todos los commits realizados por un PC determinado</div>
+                    <div class="col-sm-4"><li>git config --global user.mail mail |.name name</li></div><div clas="col-sm-8">Cambia el nombre mostrado como autor y correo de todos los commits realizados por un PC determinado</div>
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-4"><li>git revert [commit]</li></div><div clas="clo-sm-8">Devuelve la carpeta a la version del commit especificado</div>
+                    <div class="col-sm-4"><li>git revert [commit]</li></div><div clas="col-sm-8">Devuelve la carpeta a la version del commit especificado</div>
                 </div>
               </list>
             </div>
@@ -85,19 +103,19 @@
           <div class="col-sm-12">
             <list>
               <div class="row">
-                  <div class="col-sm-4"><li>git branch [nombre]</li></div><div clas="clo-sm-8">Crea una rama nueva con [nombre]</div>
+                  <div class="col-sm-4"><li>git branch [nombre]</li></div><div clas="col-sm-8">Crea una rama nueva con [nombre]</div>
               </div>
 
               <div class="row">
-                  <div class="col-sm-4"><li>git checkout [rama]</li></div><div clas="clo-sm-8">Permite mover el HEAD (CABEZA o puntero de cabezera)a la rama indicada, actualizando los archivos del directorio</div>
+                  <div class="col-sm-4"><li>git checkout [rama]</li></div><div clas="col-sm-8">Permite mover el HEAD (CABEZA o puntero de cabezera)a la rama indicada, actualizando los archivos del directorio</div>
               </div>
 
               <div class="row">
-                  <div class="col-sm-4"><li>git merge [Rama]</li></div><div clas="clo-sm-8">Une los cambios de [Rama] en la rama actual</div>
+                  <div class="col-sm-4"><li>git merge [Rama]</li></div><div clas="col-sm-8">Une los cambios de [Rama] en la rama actual</div>
               </div>
 
               <div class="row">
-                  <div class="col-sm-4"><li>git log --oneline --decorate --graph --all</li></div><div clas="clo-sm-8">Git log con estas opciones es capaz de mostrar los diferentes ramas , sus uniones y bifurcaciones</div>
+                  <div class="col-sm-4"><li>git log --oneline --decorate --graph --all</li></div><div clas="col-sm-8">Git log con estas opciones es capaz de mostrar los diferentes ramas , sus uniones y bifurcaciones</div>
               </div>
             </list>
           </div>
@@ -118,27 +136,27 @@
           <div class="col-sm-12">
             <list>
               <div class="row">
-                  <div class="col-sm-4"><li>git remote</li></div><div clas="clo-sm-8">Muestra una lista con todos los repositorios remotos agregados al proyecto</div>
+                  <div class="col-sm-4"><li>git remote</li></div><div clas="col-sm-8">Muestra una lista con todos los repositorios remotos agregados al proyecto</div>
               </div>
 
               <div class="row">
-                  <div class="col-sm-4"><li>git remote add [rama] [nombre] [direccion]</li></div><div clas="clo-sm-8">Agrega la [direccion] como repositorio remoto con nombre corto [nombre] y rama [rama]</div>
+                  <div class="col-sm-4"><li>git remote add [rama] [nombre] [direccion]</li></div><div clas="col-sm-8">Agrega la [direccion] como repositorio remoto con nombre corto [nombre] y rama [rama]</div>
               </div>
 
               <div class="row">
-                  <div class="col-sm-4"><li>git push [nombre]</li></div><div clas="clo-sm-8">Envia el repositorio local hacia el remoto, actualizandolo</div>
+                  <div class="col-sm-4"><li>git push [nombre]</li></div><div clas="col-sm-8">Envia el repositorio local hacia el remoto, actualizandolo</div>
               </div>
 
               <div class="row">
-                  <div class="col-sm-4"><li>git pull [nombre]</li></div><div clas="clo-sm-8">Descarga version desde el repositorio remoto [nombre] y realiza un merge con el local</div>
+                  <div class="col-sm-4"><li>git pull [nombre]</li></div><div clas="col-sm-8">Descarga version desde el repositorio remoto [nombre] y realiza un merge con el local</div>
               </div>
 
               <div class="row">
-                  <div class="col-sm-4"><li>git fetch [nombre]</li></div><div clas="clo-sm-8">Descarga la informacion de version desde el repositorio remoto [nombre], en una carpeta diferente, sin usar merge</div>
+                  <div class="col-sm-4"><li>git fetch [nombre]</li></div><div clas="col-sm-8">Descarga la informacion de version desde el repositorio remoto [nombre], en una carpeta diferente, sin usar merge</div>
               </div>
 
               <div class="row">
-                  <div class="col-sm-4"><li>git clone [nombre]</li></div><div clas="clo-sm-8">Descarga version desde el repositorio remoto [nombre], junto con todos los archivos extras, como tags, etc.</div>
+                  <div class="col-sm-4"><li>git clone [nombre]</li></div><div clas="col-sm-8">Descarga version desde el repositorio remoto [nombre], junto con todos los archivos extras, como tags, etc.</div>
               </div>
             </list>
           </div>
@@ -149,6 +167,6 @@
     </div>
 
   </div>
-<!-- ====================================== FIN/CODIGO ========================================== -->
+<!--====================================== FIN/CODIGO ==========================================-->
 </body>
 </html>
