@@ -56,6 +56,166 @@
 
 
     <!-- ======================== INSTALACION ======================== -->
+    <div class="container">
+  <div class="container-fluid">
+
+        <center>
+        <header class id= "instalation"><h1><strong> Empezando: Instalación </strong></h1></header>
+        <h2 style="font-size:30px">Git</h2>
+    </center>       
+<p>Para empezar a usar un poco de Git, lo primero es lo primero: tienes que instalarlo. Puedes obtenerlo de varias maneras; las dos principales son instalarlo desde código fuente, o instalar un paquete existente para tu plataforma.</p>
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Instalando desde código fuente
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+    <div class="panel-body">
+
+    <p>Para instalar Git, necesitas tener las siguientes librerías de las que Git depende: curl, zlib, openssl, expat y libiconv. Por ejemplo, si estás en un sistema que tiene yum (como Fedora) o apt-get (como un sistema basado en Debian), puedes usar estos comandos para instalar todas las dependencias:</p>
+
+    <p>$ yum install curl-devel expat-devel gettext-devel \
+    openssl-devel zlib-devel</p>
+
+    <p>$ apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \
+    libz-dev libssl-dev</p>
+    <p>Cuando tengas todas las dependencias necesarias, puedes descargar la versión más reciente de Git desde su página web:</p>
+
+    <p> http://git-scm.com/download</p>
+    <p>Luego compila e instala:</p>
+    <ul>
+    <li>$ tar -zxf git-1.6.0.5.tar.gz</li>
+    <li>$ cd git-1.6.0.5</li>
+    <li>$ make prefix=/usr/local all</li>
+    <li>$ sudo make prefix=/usr/local install</li>
+    </ul>
+    <p>Una vez hecho esto, también puedes obtener Git, a través del propio Git, para futuras actualizaciones:</p>
+
+    <p> $ git clone git://git.kernel.org/pub/scm/git/git.git</p>
+    </div>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Instalando en Linux
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        <p>Si quieres instalar Git en Linux a través de un instalador binario, en general puedes hacerlo a través de la herramienta básica de gestión de paquetes que trae tu distribución. Si estás en Fedora, puedes usar yum:</p>
+<ul>
+<li>$ yum install git-core</li>
+</ul>
+<p>O si estás en una distribución basada en Debian como Ubuntu, prueba con apt-get:</p>
+<ul>
+<li>$ apt-get install git</li>
+</ul>
+      </div>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Instalando en Mac
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+    <div class="panel-body">
+    <p>Hay tres maneras fáciles de instalar Git en un Mac. La más sencilla es usar el instalador gráfico de Git, que puedes descargar desde la página de SourceForge:</p>
+    <ul>
+    <li>http://sourceforge.net/projects/git-osx-installer/</li>
+    </ul>
+    <p>Una alternativa es instalar Git a través de MacPorts (http://www.macports.org). Si tienes MacPorts instalado, instala Git con:</p>
+    <ul>
+    <li>$ sudo port install git-core +svn +doc +bash_completion +gitweb</li>
+    </ul>
+    <p>No necesitas añadir todos los extras, pero probablemente quieras incluir +svn en caso de que alguna vez necesites usar Git con repositorios Subversion.</p>
+
+    <p> La segunda alternativa es Homebrew (http://brew.sh/). Si ya tienes instalado Homebrew, instala Git con:</p>
+    <ul>
+    <li>$ brew install git</li>
+    </ul>
+    </div>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingFour">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Instalando en Windows
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+      <div class="panel-body">
+       <p>Instalar Git en Windows es muy fácil. El proyecto msysGit tiene uno de los procesos de instalación más sencillos. Simplemente descarga el archivo exe del instalador desde la página de GitHub, y ejecútalo:</p>
+    <ul>
+    <li>http://msysgit.github.com/</li>
+    </ul>
+    <p>Una vez instalado, tendrás tanto la versión de línea de comandos (incluido un cliente SSH que nos será útil más adelante) como la interfaz gráfica de usuario estándar.</p>
+      </div>
+    </div>
+</div>
+<div>
+<center>
+  <h2 style="font-size:30px">Github Desktop </h2>
+  </center>
+  <p>Github Desktop es una útil herramienta software para contribuir a proyectos en Git y Github.com, disponible para Windows y MAC</p>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingFive">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Descarga para Windows 
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+      <div class="panel-body">
+   <ul>
+    <li><p><a href="https://github-windows.s3.amazonaws.com/GitHubSetup.exe">Descarga para Windows (7 en adelante)</a></p></li>
+    </ul>
+      </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingSix">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          Descarga para MAC 
+        </a>
+      </h4>
+    </div>
+    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+      <div class="panel-body">
+   <ul>
+    <li><p><a href="https://central.github.com/mac/latest">Descarga para MAC (OS X 10.9 en adelante)</a></p></li>
+    </ul>
+    </div>
+    </div>
+</div>
+<br>
+<center>
+  <p><i>Nota:al descargarlos, aceptas <a href="https://desktop.github.com/eula/">los términos de uso y condiciones</a></i></p>
+  <p style="font-size:13px"><i>Fuente: Desktop.github.com</i></p>
+</center>
+
+</div>
+
+        </div>
+    </div>
+</div>
     <!-- ======================== END / INSTALACION ======================== -->
 
 
