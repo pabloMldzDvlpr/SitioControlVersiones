@@ -15,6 +15,16 @@ h6 {
     font-weight: 700;
 }
 
+.divider {
+    width: 200px;
+    height: 10px;
+    border-top: 1px;
+    border-bottom: 1px;
+    color: black;
+}
+.bgn-seccion{
+    background-color: rgb(240,240,240);
+}
 
 /* ======================== HOME ======================== */
 .topnav {
