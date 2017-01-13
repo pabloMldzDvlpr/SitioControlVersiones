@@ -45,27 +45,12 @@
       <!-- END Navbar --> 
     </nav>
 
+    <header class="text-center" name="home">
+      <div class="intro-text">
+        <h1 class="">Curso de <strong><span class="color">Control de Versiones</span></strong></h1>
+        <p class="">¡Aquí conocerás herramientas tales como Git, Github, Trello y muchas más!</p>
+    </header>
     
-    <!-- Header -->
-    <a name="about"></a>
-    <div class="intro-header">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message">
-                        <h1>Curso de Control de Versiones</h1>
-                        <h3>¡Aquí encontrarás toda la información necesaria para utilizar GitHub por primera vez!</h3>
-                        <hr class="intro-divider">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.intro-header -->
 
     <!-- ======================== END / HOME ======================== -->
 
@@ -275,10 +260,79 @@
 
 
     <!-- ======================== CONTACTO ======================== -->
+    <div class="container-fluid" id="contacto">
+        <div class="row">
+          <h1><center><strong>Contacto</strong></center></h1>
+          <br>
+        <div class="col-md-6 col-md-offset-3">    
+            <a name="contacto"></a>
+            <form name="form" method="get" action="sendemail.php">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                          <input type="text" name="name" class="form-control" placeholder="Nombre" required="required">
+                        </div>
+                        <br>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                          <input type="email" name="email" class="form-control" placeholder="Correo Electronico" required="required">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" name="subject" class="form-control" placeholder="Asunto" required="required">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                      <textarea name="message" class="form-control" rows="4" placeholder="Tu Mensaje o Consulta" required="required"></textarea>
+                    </div>
+                                       
+                    <div class="form-group">
+                      <button type="submit" class="btn-submit">Enviar</button>
+                    </div>
+                </form>   
+              </div>
+      </div>
+    </div>
     <!-- ======================== END / CONTACTO ======================== -->
 
 
     <!-- ======================== FOOTER ======================== -->
+        <footer>
+        <br>
+          <div class="row">
+            <div class="col-md-2">
+              <div class="center-block">
+                <img id="imagenesFooter" src="img/logodiicc.png" style="width:75px;height:75px";>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <ul>
+                <li><a href="#home" class="page-scroll" >Inicio</a></li>
+                <li><a href="#instalation" class="page-scroll">  Instalación</a></li>
+                <li><a href="#code" class="page-scroll"> Códigos</a></li>
+                <li><a href="#tool" class="page-scroll"> Herramientas</a></li>
+                <li><a href="#doc" class="page-scroll"> Doc</a></li>
+                <li><a href="#participants" class="page-scroll"> Participantes</a></li>
+                <li>  <a href="#contact" class="page-scroll"> Contacto</a></li>
+              </ul>
+          </div>
+          <div class="col-md-4">
+          <ul>
+            <li>Curso Control de Versiones</li>
+            <li>Universidad de Atacama</li>
+            <li>Copayapu 485</li>
+            <li>Copiapó</li>
+            <li>Chile</li>
+            <li>2017</li>
+          </ul>
+          </div>
+            <div class="col-md-2">
+              <img id="imagenesFooter" src="img/logoUda.gif" style="width:75px;height:75px";>
+            </div>
+          </div>
+        </footer>
     <!-- ======================== END / FOOTER ======================== -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
