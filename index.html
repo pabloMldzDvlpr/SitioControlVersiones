@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title></title>
+    <title>Electivo II: Sistema de control de versiones</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,14 +23,14 @@
 <body>
   
     <!-- ======================== HOME ======================== -->
-    <nav id="menu" class="">
-    <div class="container"> 
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+    <div class="container topnav"> 
       <!-- Navbar -->
-          <div class="">
+          <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
             <a class="navbar-brand" href="#home">Curso GIT</a> </div>
 
-          <div class="navbar-collapse collapse">
+          <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li> <a href="#home" class="page-scroll">Inicio</a></li>
               <li> <a href="#instalation" class="page-scroll"> Instalación</a></li>
@@ -45,12 +45,27 @@
       <!-- END Navbar --> 
     </nav>
 
-    
-    <header class="text-center" name="home">
-      <div class="intro-text">
-        <h1 class="">Curso de <strong><span class="color">Control de Versiones</span></strong></h1>
-        <p class="">¡Aquí conocerás herramientas tales como Git, Github, Trello y muchas más!</p>
-    </header>
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>Curso de Control de Versiones</h1>
+                        <hr class="intro-divider">
+                        <h3>¡Aquí encontrarás toda la información necesaria para utilizar GitHub por primera vez!</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
 
     <!-- ======================== END / HOME ======================== -->
 
@@ -220,16 +235,256 @@
 
 
     <!-- ======================== CODIGOS ======================== -->
+    <div id="code">
+      <div>
+        <center>
+          <strong>
+            <h1>Comandos Git</h1>
+          </strong>
+          <hr>
+          <p>En esta seccion se encuentra una lista con los comandos necesarios para utilizar git:</p>
+        </center>
+      </div>
+      <div class="container-fluid">
+        <div class="container"> 
+
+          <div class="panel-group">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#sec-1">Repositorio local</a>
+                  </h4>
+              </div>
+              <div id="sec-1" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <div class="col-sm-12">
+                      <list>
+                        <div class="row">
+                            <div class="col-sm-4"><li>git init</li></div><div class="col-sm-8">Inicializa el repositorio local en la carpeta actual.</div>  
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4"><li>git add [nombredearchivo.extension]</li></div><div class="col-sm-8">Agrega el archivo especificado a la lista para commits</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4"><li>git add .</li></div><div class="col-sm-8">Agrega todos los archivos modificados a las lista</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4"><li>git status</li></div><div class="col-sm-8">Muestra el estado de los archivos en el directorio actual.</div> 
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4"><li>git commit -m "mensaje de commit"</li></div><div class="col-sm-8">Crea un commit, un estado de documento(version), el cual puede ser restaurado posteriormente.</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4"><li>git log --oneline --decorate</li></div><div clas="col-sm-8">Muestra todos los commits(versiones) que se han realizado al directorio.</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4"><li>git diff [codigocommit1] [codigocommit2]</li></div><div clas="col-sm-8">Permite ver los cambios realizados al directorio entre las 2 versiones especificadas</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4"><li>git config --global user.mail mail |.name name</li></div><div clas="col-sm-8">Cambia el nombre mostrado como autor y correo de todos los commits realizados por un PC determinado</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4"><li>git revert [commit]</li></div><div clas="col-sm-8">Devuelve la carpeta a la version del commit especificado</div>
+                        </div>
+                      </list>
+                    </div>
+                  </div>
+                  <div class="panel-footer">
+                  </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#sec-2">Ramas</a>
+                  </h4>
+              </div>
+              <div id="sec-2" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="col-sm-12">
+                    <list>
+                      <div class="row">
+                          <div class="col-sm-4"><li>git branch [nombre]</li></div><div clas="col-sm-8">Crea una rama nueva con [nombre]</div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-sm-4"><li>git checkout [rama]</li></div><div clas="col-sm-8">Permite mover el HEAD (CABEZA o puntero de cabezera)a la rama indicada, actualizando los archivos del directorio</div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-sm-4"><li>git merge [Rama]</li></div><div clas="col-sm-8">Une los cambios de [Rama] en la rama actual</div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-sm-4"><li>git log --oneline --decorate --graph --all</li></div><div clas="col-sm-8">Git log con estas opciones es capaz de mostrar los diferentes ramas , sus uniones y bifurcaciones</div>
+                      </div>
+                    </list>
+                  </div>
+                </div>
+                <div class="panel-footer">
+                </div>
+              </div>
+            </div>
+            
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#sec-3">Repositorio remoto</a>
+                  </h4>
+              </div>
+              <div id="sec-3" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="col-sm-12">
+                    <list>
+                      <div class="row">
+                          <div class="col-sm-4"><li>git remote</li></div><div clas="col-sm-8">Muestra una lista con todos los repositorios remotos agregados al proyecto</div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-sm-4"><li>git remote add [rama] [nombre] [direccion]</li></div><div clas="col-sm-8">Agrega la [direccion] como repositorio remoto con nombre corto [nombre] y rama [rama]</div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-sm-4"><li>git push [nombre]</li></div><div clas="col-sm-8">Envia el repositorio local hacia el remoto, actualizandolo</div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-sm-4"><li>git pull [nombre]</li></div><div clas="col-sm-8">Descarga version desde el repositorio remoto [nombre] y realiza un merge con el local</div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-sm-4"><li>git fetch [nombre]</li></div><div clas="col-sm-8">Descarga la informacion de version desde el repositorio remoto [nombre], en una carpeta diferente, sin usar merge</div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-sm-4"><li>git clone [nombre]</li></div><div clas="col-sm-8">Descarga version desde el repositorio remoto [nombre], junto con todos los archivos extras, como tags, etc.</div>
+                      </div>
+                    </list>
+                  </div>
+                </div>
+                <div class="panel-footer">
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
     <!-- ======================== END / CODIGOS ======================== -->
 
 
     <!-- ======================== HERRAMIENTAS ======================== -->
+    <div class="container">
+     <div class="container-fluid">
+         <center><strong><h1>Herramientas</h1></strong></center>
+         <div class="row">
+          <!-- primera columna -->
+          <div class="col-md-4">
+       			<h3><img src="img/logogithub.png" id="img-herramientas" ;>Github</h3>
+
+                <p>GitHub es una plataforma de desarrollo colaborativo de software para alojar proyectos utilizando el sistema de control de versiones Git. El código se almacena de forma pública, aunque también se puede hacer de forma privada, creando una cuenta de pago. </p>   
+          </div>
+          <div class="col-md-4">
+            <h3><img src="img/logogitdesktop.png" id="img-herramientas" >Github Desktop</h3>
+
+                <p> GitHub Desktop  es una herramienta de escritotio donde será más rápido y fácil el poder contribuir a proyectos además de ofrecer una experiencia de uso unificada entre Mac y Windows.</p>
+          </div>
+          <div class="col-md-4">
+            <h3><img src="img/logosource.png" id="img-herramientas" >SourceTree</h3>
+
+                <p>SourceTree simplifica la manera en que interactúa con los repositorios de Git y Mercurial para centrarse en la codificación. Visualice y administre sus repositorios a través de la sencilla interfaz de SourceTree.</p>
+          </div>
+          <!-- fin primera columna -->
+          <!-- Segunda columna -->
+          <div class="row">
+             <div class="col-md-12">
+      		 <div class="col-md-4 col-md-offset-2">
+       		  <h3><img src="img/logotrello.png" id="img-herramientas">Trello</h3>
+
+                <p>Trello es un gestor de tareas que permite el trabajo de forma colaborativa mediante tableros (board) compuestos de columnas (llamadas listas) que representan distintos estados. </p>
+
+       		</div>
+       		<div class="col-md-4 " >
+       		<h3><img src="img/logoslack.jpg" id="img-herramientas">Slack</h3>
+
+                <p>Slack es una herramienta de mensajería pensada para equipos. Al igual que otras opciones existentes permite crear grupos a los que accederán los diferentes miembros para poder estar comunicados todos, como si estuviesen en la misma oficina.</p>
+       		</div>
+       	   </div>
+         </div>
+         <!-- Fin segunda columna -->
+         </div>
+      </div>
+    </div>
     <!-- ======================== END / HERRAMIENTAS ======================== -->
 
 
     <!-- ======================== DOC ======================== -->
     <!-- ======================== END / DOC ======================== -->
+    <div class="container">
 
+      <center><h1>Documententación</h1></center>
+      <hr class="divider">
+      <!-- Projects Row -->
+      <div class="row">
+          <div class="col-md-4 portfolio-item">
+              <a href="#">
+                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+              </a>
+              <h3>
+                  <a href="#">Reutilización de Software</a>
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+          </div>
+          <div class="col-md-4 portfolio-item">
+              <a href="#">
+                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+              </a>
+              <h3>
+                  <a href="#">Gestión de la Configuración</a>
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+          </div>
+          <div class="col-md-4 portfolio-item">
+              <a href="#">
+                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+              </a>
+              <h3>
+                  <a href="#">Desarrollo en el Reuso</a>
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+          </div>
+      </div>
+      <!-- /.row -->
+
+      <div class="row">
+          <div class="col-md-4 col-md-offset-2 portfolio-item">
+              <a href="#">
+                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+              </a>
+              <h3>
+                  <a href="#">Estándares de código y buenas prácticas</a>
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+          </div>
+          <div class="col-md-4 portfolio-item">
+              <a href="#">
+                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+              </a>
+              <h3>
+                  <a href="#">Desarrollo Basado en Componentes</a>
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+          </div>
+      </div>
+    </div>
 
     <!-- ======================== PARTICIPANTES ======================== -->
     <div class="container" id="div-instalacion">
@@ -307,10 +562,79 @@
 
 
     <!-- ======================== CONTACTO ======================== -->
+    <div class="container-fluid" id="contacto">
+        <div class="row">
+          <h1><center><strong>Contacto</strong></center></h1>
+          <br>
+        <div class="col-md-6 col-md-offset-3">    
+            <a name="contacto"></a>
+            <form name="form" method="get" action="sendemail.php">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                          <input type="text" name="name" class="form-control" placeholder="Nombre" required="required">
+                        </div>
+                        <br>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                          <input type="email" name="email" class="form-control" placeholder="Correo Electronico" required="required">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" name="subject" class="form-control" placeholder="Asunto" required="required">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                      <textarea name="message" class="form-control" rows="4" placeholder="Tu Mensaje o Consulta" required="required"></textarea>
+                    </div>
+                                       
+                    <div class="form-group">
+                      <button type="submit" class="btn-submit">Enviar</button>
+                    </div>
+                </form>   
+              </div>
+      </div>
+    </div>
     <!-- ======================== END / CONTACTO ======================== -->
 
 
     <!-- ======================== FOOTER ======================== -->
+        <footer>
+        <br>
+          <div class="row">
+            <div class="col-md-2">
+              <div class="center-block">
+                <img id="imagenesFooter" src="img/logodiicc.png" style="width:75px;height:75px";>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <ul>
+                <li><a href="#home" class="page-scroll" >Inicio</a></li>
+                <li><a href="#instalation" class="page-scroll">  Instalación</a></li>
+                <li><a href="#code" class="page-scroll"> Códigos</a></li>
+                <li><a href="#tool" class="page-scroll"> Herramientas</a></li>
+                <li><a href="#doc" class="page-scroll"> Doc</a></li>
+                <li><a href="#participants" class="page-scroll"> Participantes</a></li>
+                <li>  <a href="#contact" class="page-scroll"> Contacto</a></li>
+              </ul>
+          </div>
+          <div class="col-md-4">
+          <ul>
+            <li>Curso Control de Versiones</li>
+            <li>Universidad de Atacama</li>
+            <li>Copayapu 485</li>
+            <li>Copiapó</li>
+            <li>Chile</li>
+            <li>2017</li>
+          </ul>
+          </div>
+            <div class="col-md-2">
+              <img id="imagenesFooter" src="img/logoUda.gif" style="width:75px;height:75px";>
+            </div>
+          </div>
+        </footer>
     <!-- ======================== END / FOOTER ======================== -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
