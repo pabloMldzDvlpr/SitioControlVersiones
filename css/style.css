@@ -26,4 +26,16 @@
 
 
 /* ======================== FOOTER ======================== */
+	footer{
+		background-color: black;
+		color: white;
+	}
+	#imagenesFooter{
+		margin-top: 10%;
+		margin-left:10%;
+	}
+	ul li {
+		list-style-type:none;
+	}
+
 /* ======================== END / FOOTER ======================== */
