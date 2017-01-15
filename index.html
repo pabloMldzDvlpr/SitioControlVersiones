@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title></title>
+    <title>Electivo II: Sistema de control de versiones</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -45,33 +45,521 @@
       <!-- END Navbar --> 
     </nav>
 
-    <header class="text-center" name="home">
-      <div class="intro-text">
-        <h1 class="">Curso de <strong><span class="color">Control de Versiones</span></strong></h1>
-        <p class="">¡Aquí conocerás herramientas tales como Git, Github, Trello y muchas más!</p>
-    </header>
-    
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>Curso de Control de Versiones</h1>
+                        <hr class="intro-divider">
+                        <h3>¡Aquí encontrarás toda la información necesaria para utilizar GitHub por primera vez!</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
 
     <!-- ======================== END / HOME ======================== -->
 
 
     <!-- ======================== INSTALACION ======================== -->
+    <div class="container" id="instalation">
+            <div class="container-fluid">
+
+                <center>
+                <header><h1><strong> Empezando: Instalación </strong></h1></header>
+                <h2 style="font-size:30px">Git</h2>
+            </center>       
+        <p>Para empezar a usar un poco de Git, lo primero es lo primero: tienes que instalarlo. Puedes obtenerlo de varias maneras; las dos principales son instalarlo desde código fuente, o instalar un paquete existente para tu plataforma.</p>
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Instalando desde código fuente
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+
+            <p>Para instalar Git, necesitas tener las siguientes librerías de las que Git depende: curl, zlib, openssl, expat y libiconv. Por ejemplo, si estás en un sistema que tiene yum (como Fedora) o apt-get (como un sistema basado en Debian), puedes usar estos comandos para instalar todas las dependencias:</p>
+
+            <p>$ yum install curl-devel expat-devel gettext-devel \
+            openssl-devel zlib-devel</p>
+
+            <p>$ apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \
+            libz-dev libssl-dev</p>
+            <p>Cuando tengas todas las dependencias necesarias, puedes descargar la versión más reciente de Git desde su página web:</p>
+
+            <p> http://git-scm.com/download</p>
+            <p>Luego compila e instala:</p>
+            <ul>
+            <li>$ tar -zxf git-1.6.0.5.tar.gz</li>
+            <li>$ cd git-1.6.0.5</li>
+            <li>$ make prefix=/usr/local all</li>
+            <li>$ sudo make prefix=/usr/local install</li>
+            </ul>
+            <p>Una vez hecho esto, también puedes obtener Git, a través del propio Git, para futuras actualizaciones:</p>
+
+            <p> $ git clone git://git.kernel.org/pub/scm/git/git.git</p>
+            </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Instalando en Linux
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body">
+                <p>Si quieres instalar Git en Linux a través de un instalador binario, en general puedes hacerlo a través de la herramienta básica de gestión de paquetes que trae tu distribución. Si estás en Fedora, puedes usar yum:</p>
+        <ul>
+        <li>$ yum install git-core</li>
+        </ul>
+        <p>O si estás en una distribución basada en Debian como Ubuntu, prueba con apt-get:</p>
+        <ul>
+        <li>$ apt-get install git</li>
+        </ul>
+              </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Instalando en Mac
+                </a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">
+            <p>Hay tres maneras fáciles de instalar Git en un Mac. La más sencilla es usar el instalador gráfico de Git, que puedes descargar desde la página de SourceForge:</p>
+            <ul>
+            <li>http://sourceforge.net/projects/git-osx-installer/</li>
+            </ul>
+            <p>Una alternativa es instalar Git a través de MacPorts (http://www.macports.org). Si tienes MacPorts instalado, instala Git con:</p>
+            <ul>
+            <li>$ sudo port install git-core +svn +doc +bash_completion +gitweb</li>
+            </ul>
+            <p>No necesitas añadir todos los extras, pero probablemente quieras incluir +svn en caso de que alguna vez necesites usar Git con repositorios Subversion.</p>
+
+            <p> La segunda alternativa es Homebrew (http://brew.sh/). Si ya tienes instalado Homebrew, instala Git con:</p>
+            <ul>
+            <li>$ brew install git</li>
+            </ul>
+            </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingFour">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Instalando en Windows
+                </a>
+              </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+              <div class="panel-body">
+               <p>Instalar Git en Windows es muy fácil. El proyecto msysGit tiene uno de los procesos de instalación más sencillos. Simplemente descarga el archivo exe del instalador desde la página de GitHub, y ejecútalo:</p>
+            <ul>
+            <li>http://msysgit.github.com/</li>
+            </ul>
+            <p>Una vez instalado, tendrás tanto la versión de línea de comandos (incluido un cliente SSH que nos será útil más adelante) como la interfaz gráfica de usuario estándar.</p>
+              </div>
+            </div>
+        </div>
+        <div>
+        <center>
+          <h2 style="font-size:30px">Github Desktop </h2>
+          </center>
+          <p>Github Desktop es una útil herramienta software para contribuir a proyectos en Git y Github.com, disponible para Windows y MAC</p>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingFive">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Descarga para Windows 
+                </a>
+              </h4>
+            </div>
+            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+              <div class="panel-body">
+           <ul>
+            <li><p><a href="https://github-windows.s3.amazonaws.com/GitHubSetup.exe">Descarga para Windows (7 en adelante)</a></p></li>
+            </ul>
+              </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingSix">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  Descarga para MAC 
+                </a>
+              </h4>
+            </div>
+            <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+              <div class="panel-body">
+           <ul>
+            <li><p><a href="https://central.github.com/mac/latest">Descarga para MAC (OS X 10.9 en adelante)</a></p></li>
+            </ul>
+            </div>
+            </div>
+        </div>
+        <br>
+        <center>
+          <p><i>Nota:al descargarlos, aceptas <a href="https://desktop.github.com/eula/">los términos de uso y condiciones</a></i></p>
+          <p style="font-size:13px"><i>Fuente: Desktop.github.com</i></p>
+        </center>
+
+        </div>
+
+       </div>
+    </div>
+</div>
     <!-- ======================== END / INSTALACION ======================== -->
 
 
     <!-- ======================== CODIGOS ======================== -->
+    <div id="code">
+      <div>
+        <center>
+          <strong>
+            <h1>Comandos Git</h1>
+          </strong>
+          <hr>
+          <p>En esta seccion se encuentra una lista con los comandos necesarios para utilizar git:</p>
+        </center>
+      </div>
+      <div class="container-fluid">
+        <div class="container"> 
+
+          <div class="panel-group">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#sec-1">Repositorio local</a>
+                  </h4>
+              </div>
+              <div id="sec-1" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <div class="col-sm-12">
+                      <list>
+                        <div class="row">
+                            <div class="col-sm-4"><li>git init</li></div><div class="col-sm-8">Inicializa el repositorio local en la carpeta actual.</div>  
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4"><li>git add [nombredearchivo.extension]</li></div><div class="col-sm-8">Agrega el archivo especificado a la lista para commits</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4"><li>git add .</li></div><div class="col-sm-8">Agrega todos los archivos modificados a las lista</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4"><li>git status</li></div><div class="col-sm-8">Muestra el estado de los archivos en el directorio actual.</div> 
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4"><li>git commit -m "mensaje de commit"</li></div><div class="col-sm-8">Crea un commit, un estado de documento(version), el cual puede ser restaurado posteriormente.</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4"><li>git log --oneline --decorate</li></div><div clas="col-sm-8">Muestra todos los commits(versiones) que se han realizado al directorio.</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4"><li>git diff [codigocommit1] [codigocommit2]</li></div><div clas="col-sm-8">Permite ver los cambios realizados al directorio entre las 2 versiones especificadas</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4"><li>git config --global user.mail mail |.name name</li></div><div clas="col-sm-8">Cambia el nombre mostrado como autor y correo de todos los commits realizados por un PC determinado</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4"><li>git revert [commit]</li></div><div clas="col-sm-8">Devuelve la carpeta a la version del commit especificado</div>
+                        </div>
+                      </list>
+                    </div>
+                  </div>
+                  <div class="panel-footer">
+                  </div>
+              </div>
+            </div>
+          
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#sec-2">Ramas</a>
+                  </h4>
+              </div>
+              <div id="sec-2" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="col-sm-12">
+                    <list>
+                      <div class="row">
+                          <div class="col-sm-4"><li>git branch [nombre]</li></div><div clas="col-sm-8">Crea una rama nueva con [nombre]</div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-sm-4"><li>git checkout [rama]</li></div><div clas="col-sm-8">Permite mover el HEAD (CABEZA o puntero de cabezera)a la rama indicada, actualizando los archivos del directorio</div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-sm-4"><li>git merge [Rama]</li></div><div clas="col-sm-8">Une los cambios de [Rama] en la rama actual</div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-sm-4"><li>git log --oneline --decorate --graph --all</li></div><div clas="col-sm-8">Git log con estas opciones es capaz de mostrar los diferentes ramas , sus uniones y bifurcaciones</div>
+                      </div>
+                    </list>
+                  </div>
+                </div>
+                <div class="panel-footer">
+                </div>
+              </div>
+            </div>
+            
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#sec-3">Repositorio remoto</a>
+                  </h4>
+              </div>
+              <div id="sec-3" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="col-sm-12">
+                    <list>
+                      <div class="row">
+                          <div class="col-sm-4"><li>git remote</li></div><div clas="col-sm-8">Muestra una lista con todos los repositorios remotos agregados al proyecto</div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-sm-4"><li>git remote add [rama] [nombre] [direccion]</li></div><div clas="col-sm-8">Agrega la [direccion] como repositorio remoto con nombre corto [nombre] y rama [rama]</div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-sm-4"><li>git push [nombre]</li></div><div clas="col-sm-8">Envia el repositorio local hacia el remoto, actualizandolo</div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-sm-4"><li>git pull [nombre]</li></div><div clas="col-sm-8">Descarga version desde el repositorio remoto [nombre] y realiza un merge con el local</div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-sm-4"><li>git fetch [nombre]</li></div><div clas="col-sm-8">Descarga la informacion de version desde el repositorio remoto [nombre], en una carpeta diferente, sin usar merge</div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-sm-4"><li>git clone [nombre]</li></div><div clas="col-sm-8">Descarga version desde el repositorio remoto [nombre], junto con todos los archivos extras, como tags, etc.</div>
+                      </div>
+                    </list>
+                  </div>
+                </div>
+                <div class="panel-footer">
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
     <!-- ======================== END / CODIGOS ======================== -->
 
 
     <!-- ======================== HERRAMIENTAS ======================== -->
+    <div class="container" id="herramientas">
+     <div class="container-fluid">
+         <center><strong><h1 id="tool">Herramientas</h1></strong></center>
+         <hr>
+         <p id="subtitulo">En esta seccion se encuentra una descripcion de la herramientas utilizadas en el curso:</p>
+         <div class="row">
+          <!-- primera columna -->
+          <div class="col-md-4">
+       			<h3><img src="img/logogithub.png" id="img-herramientas" >Github</h3>
+
+                <p>GitHub es una plataforma de desarrollo colaborativo de software para alojar proyectos utilizando el sistema de control de versiones Git. El código se almacena de forma pública, aunque también se puede hacer de forma privada, creando una cuenta de pago. </p>   
+          </div>
+          <div class="col-md-4">
+            <h3><img src="img/logogitdesktop.png" id="img-herramientas" >Github Desktop</h3>
+
+                <p> GitHub Desktop  es una herramienta de escritotio donde será más rápido y fácil el poder contribuir a proyectos además de ofrecer una experiencia de uso unificada entre Mac y Windows.</p>
+          </div>
+          <div class="col-md-4">
+            <h3><img src="img/logosource.png" id="img-herramientas" >SourceTree</h3>
+
+                <p>SourceTree simplifica la manera en que interactúa con los repositorios de Git y Mercurial para centrarse en la codificación. Visualice y administre sus repositorios a través de la sencilla interfaz de SourceTree.</p>
+          </div>
+          <!-- fin primera columna -->
+          <!-- Segunda columna -->
+          <div class="row">
+             <div class="col-md-12">
+      		 <div class="col-md-4 col-md-offset-2">
+       		  <h3><img src="img/logotrello.png" id="img-herramientas">Trello</h3>
+
+                <p>Trello es un gestor de tareas que permite el trabajo de forma colaborativa mediante tableros (board) compuestos de columnas (llamadas listas) que representan distintos estados. </p>
+
+       		</div>
+       		<div class="col-md-4 " >
+       		<h3><img src="img/logoslack.jpg" id="img-herramientas">Slack</h3>
+
+                <p>Slack es una herramienta de mensajería pensada para equipos. Al igual que otras opciones existentes permite crear grupos a los que accederán los diferentes miembros para poder estar comunicados todos, como si estuviesen en la misma oficina.</p>
+       		</div>
+       	   </div>
+         </div>
+         <!-- Fin segunda columna -->
+         </div>
+      </div>
+    </div>
     <!-- ======================== END / HERRAMIENTAS ======================== -->
 
 
     <!-- ======================== DOC ======================== -->
     <!-- ======================== END / DOC ======================== -->
+    <div class="container">
 
+      <center><h1>Documententación</h1></center>
+      <hr class="divider">
+      <!-- Projects Row -->
+      <div class="row">
+          <div class="col-md-4 portfolio-item">
+              <a href="#">
+                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+              </a>
+              <h3>
+                  <a href="#">Reutilización de Software</a>
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+          </div>
+          <div class="col-md-4 portfolio-item">
+              <a href="#">
+                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+              </a>
+              <h3>
+                  <a href="#">Gestión de la Configuración</a>
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+          </div>
+          <div class="col-md-4 portfolio-item">
+              <a href="#">
+                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+              </a>
+              <h3>
+                  <a href="#">Desarrollo en el Reuso</a>
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+          </div>
+      </div>
+      <!-- /.row -->
+
+      <div class="row">
+          <div class="col-md-4 col-md-offset-2 portfolio-item">
+              <a href="#">
+                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+              </a>
+              <h3>
+                  <a href="#">Estándares de código y buenas prácticas</a>
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+          </div>
+          <div class="col-md-4 portfolio-item">
+              <a href="#">
+                  <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+              </a>
+              <h3>
+                  <a href="#">Desarrollo Basado en Componentes</a>
+              </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+          </div>
+      </div>
+    </div>
 
     <!-- ======================== PARTICIPANTES ======================== -->
+    <div class="container" id="participants">
+
+        <!-- Introduction Row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header" align="center">Sobre nosotros
+                    <small align="center">¡Este es nuestro equipo!</small>
+                </h1>
+                <p align="center">Nuestro equipo está conformado por un jefe de proyecto y cuatro desarrolladores:</p>
+            </div>
+        </div>
+
+        <!-- Team Members Row -->
+        <div class="row">
+        <br>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="https://maxcdn.icons8.com/Share/icon/Users//user_male_circle_filled1600.png" style="width:200px;height:200px" alt="">
+                <h3>Pablo Melendez 
+                    <small>Jefe de proyecto</small>
+                </h3>
+                <p><img src="http://www.free-icons-download.net/images/google-gmail-logo-icon-24576.png" style="float:center;height:25px;width:25px"> pablomelendez.wd@gmail.com  </p>
+                <p><img src="http://orig03.deviantart.net/6873/f/2013/031/c/d/github_by_ovilia1024-d5teqdd.png" style="float:center;height:25px;width:25px"> <a href="https://github.com/pabloMldzDvlpr">https://www.github.com/pabloMldzDvlpr</a></p><br> 
+            </div>
+
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="https://maxcdn.icons8.com/Share/icon/Users//user_male_circle_filled1600.png" style="width:200px;height:200px" alt="">
+                <h3>Carlos Vernal
+                    <small>Desarrollador</small>
+                </h3>
+                <p><img src="http://www.free-icons-download.net/images/google-gmail-logo-icon-24576.png" style="float:center;height:25px;width:25px"> carlos.vernal.navarrete@gmail.com  </p>     
+                <p><img src="http://orig03.deviantart.net/6873/f/2013/031/c/d/github_by_ovilia1024-d5teqdd.png" style="float:center;height:25px;width:25px"> <a href="https://github.com/CarlosVernal">https://www.github.com/CarlosVernal</a></p><br> 
+            </div>
+
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="https://maxcdn.icons8.com/Share/icon/Users//user_male_circle_filled1600.png" style="width:200px;height:200px" alt="">
+                <h3>Alexis Rodriguez
+                    <small>Desarrollador</small>
+                </h3>
+                <p><img src="http://www.free-icons-download.net/images/google-gmail-logo-icon-24576.png" style="float:center;height:25px;width:25px">  alecsarroa@gmail.com  </p>     
+                <p><img src="http://orig03.deviantart.net/6873/f/2013/031/c/d/github_by_ovilia1024-d5teqdd.png" style="float:center;height:25px;width:25px"> <a href="https://github.com/zahard25">https://www.github.com/zahard25</a></p><br>     
+            </div>
+            <br>
+            <div class="col-md-4 col-md-offset-2 text-center">
+                <img class="img-circle img-responsive img-center" src="https://maxcdn.icons8.com/Share/icon/Users//user_male_circle_filled1600.png" style="width:200px;height:200px" alt="">
+                <h3>Manuel Henríquez
+                    <small>Desarrollador</small>
+                </h3>
+                <p><img src="http://www.free-icons-download.net/images/google-gmail-logo-icon-24576.png" style="float:center;height:25px;width:25px">  h3nryquez@gmail.com   </p>  
+                <p><img src="http://orig03.deviantart.net/6873/f/2013/031/c/d/github_by_ovilia1024-d5teqdd.png" style="float:center;height:25px;width:25px"> <a href="https://github.com/LastPlatypus">https://www.github.com/LastPlatypus</a></p><br>   
+            </div>
+
+            <div class="col-md-4 text-center">
+               <img class="img-circle img-responsive img-center" src="https://cdn1.iconfinder.com/data/icons/social-messaging-productivity-1-1/128/gender-female2-512.png" style="width:200px;height:200px" alt="">
+                <h3>Karina Páez
+                    <small>Desarrollador</small>
+                </h3>
+                <p><img src="http://www.free-icons-download.net/images/google-gmail-logo-icon-24576.png" style="float:center;height:25px;width:25px">  k.paez31@gmail.com  </p>     
+                <p><img src="http://orig03.deviantart.net/6873/f/2013/031/c/d/github_by_ovilia1024-d5teqdd.png" style="float:center;height:25px;width:25px"> <a href="https://github.com/karinapaez">https://www.github.com/karinapaez</a></p><br>  
+            </div>   
+        </div>
+        <hr>
+
+
+</div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
     <!-- ======================== END / PARTICIPANTES ======================== -->
 
 

@@ -2,6 +2,7 @@ body,
 html {
     width: 100%;
     height: 100%;
+
 }
 
 body,
@@ -13,8 +14,19 @@ h5,
 h6 {
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+
 }
 
+.divider {
+    width: 200px;
+    height: 10px;
+    border-top: 1px;
+    border-bottom: 1px;
+    color: black;
+}
+.bgn-seccion{
+    background-color: rgb(240,240,240);
+}
 
 /* ======================== HOME ======================== */
 .topnav {
@@ -45,18 +57,40 @@ h6 {
 
 
 /* ======================== CODIGOS ======================== */
+hr
+	{
+	width:70%;
+	}
 /* ======================== END / CODIGOS ======================== */
 
 
 /* ======================== HERRAMIENTAS ======================== */
+#img-herramientas {
+	width:75px;
+	height:75px
+}
+
+#subtitulo{
+   text-align: center;
+}
+
 /* ======================== END / HERRAMIENTAS ======================== */
 
 
 /* ======================== DOC ======================== */
 /* ======================== END / DOC ======================== */
-
+.portfolio-item {
+    margin-bottom: 25px;
+}
 
 /* ======================== PARTICIPANTES ======================== */
+
+.img-center {
+	margin: 0 auto;
+}
+
+
+
 /* ======================== END / PARTICIPANTES ======================== */
 
 
