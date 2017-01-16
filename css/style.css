@@ -36,13 +36,21 @@ h6 {
     font-size: 18px;
     font-weight: 400;
 }
+.intro-message {
+    position: relative;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
 .intro-header {
+    height: 90vh;
+    top: 50%;
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
     background: url(../img/bgn.jpg) no-repeat center center;
     background-size: cover;
+
 }
 .intro-divider {
     width: 400px;
