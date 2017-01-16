@@ -75,9 +75,11 @@
             <div class="container-fluid">
 
                 <center>
-                <header><h1><strong> Empezando: Instalación </strong></h1></header>
-                <h2 style="font-size:30px">Git</h2>
-            </center>       
+                  <header><h1><strong> Empezando: Instalación </strong></h1></header>
+                  <hr>
+                  <h2 style="font-size:30px">Git</h2>
+                </center>     
+
         <p>Para empezar a usar un poco de Git, lo primero es lo primero: tienes que instalarlo. Puedes obtenerlo de varias maneras; las dos principales son instalarlo desde código fuente, o instalar un paquete existente para tu plataforma.</p>
 
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -260,7 +262,7 @@
                     <div class="col-sm-12">
                       <list>
                         <div class="row">
-                            <div class="col-sm-4"><li>git init</li></div><div class="col-sm-8">Inicializa el repositorio local en la carpeta actual.</div>  
+                            <div class="col-sm-4"><li>git init</li></div><div class="col-sm-8">Inicializa el repositorio local en la carpeta actual</div>  
                         </div>
 
                         <div class="row">
@@ -272,15 +274,15 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-sm-4"><li>git status</li></div><div class="col-sm-8">Muestra el estado de los archivos en el directorio actual.</div> 
+                            <div class="col-sm-4"><li>git status</li></div><div class="col-sm-8">Muestra el estado de los archivos en el directorio actual</div> 
                         </div>
 
                         <div class="row">
-                            <div class="col-sm-4"><li>git commit -m "mensaje de commit"</li></div><div class="col-sm-8">Crea un commit, un estado de documento(version), el cual puede ser restaurado posteriormente.</div>
+                            <div class="col-sm-4"><li>git commit -m "mensaje de commit"</li></div><div class="col-sm-8">Crea un commit, un estado de documento (version), el cual puede ser restaurado posteriormente</div>
                         </div>
 
                         <div class="row">
-                            <div class="col-sm-4"><li>git log --oneline --decorate</li></div><div clas="col-sm-8">Muestra todos los commits(versiones) que se han realizado al directorio.</div>
+                            <div class="col-sm-4"><li>git log --oneline --decorate</li></div><div clas="col-sm-8">Muestra todos los commits(versiones) que se han realizado al directorio</div>
                         </div>
 
                         <div class="row">
@@ -317,7 +319,7 @@
                       </div>
 
                       <div class="row">
-                          <div class="col-sm-4"><li>git checkout [rama]</li></div><div clas="col-sm-8">Permite mover el HEAD (CABEZA o puntero de cabezera)a la rama indicada, actualizando los archivos del directorio</div>
+                          <div class="col-sm-4"><li>git checkout [rama]</li></div><div clas="col-sm-8">Permite mover el HEAD (CABEZA o puntero de cabezera) a la rama indicada, actualizando los archivos del directorio</div>
                       </div>
 
                       <div class="row">
@@ -350,15 +352,15 @@
                       </div>
 
                       <div class="row">
-                          <div class="col-sm-4"><li>git remote add [rama] [nombre] [direccion]</li></div><div clas="col-sm-8">Agrega la [direccion] como repositorio remoto con nombre corto [nombre] y rama [rama]</div>
+                          <div class="col-sm-4"><li>git remote add [nombre] [direccion]</li></div><div clas="col-sm-8">Agrega la [direccion] como repositorio remoto con nombre corto [nombre]</div>
                       </div>
 
                       <div class="row">
-                          <div class="col-sm-4"><li>git push [nombre]</li></div><div clas="col-sm-8">Envia el repositorio local hacia el remoto, actualizandolo</div>
+                          <div class="col-sm-4"><li>git push [nombre] [rama]</li></div><div clas="col-sm-8">Envia el repositorio local hacia el remoto, actualizandolo</div>
                       </div>
 
                       <div class="row">
-                          <div class="col-sm-4"><li>git pull [nombre]</li></div><div clas="col-sm-8">Descarga version desde el repositorio remoto [nombre] y realiza un merge con el local</div>
+                          <div class="col-sm-4"><li>git pull [nombre] [rama]</li></div><div clas="col-sm-8">Descarga version desde el repositorio remoto [nombre] y realiza un merge con el local</div>
                       </div>
 
                       <div class="row">
@@ -382,9 +384,9 @@
 
 
     <!-- ======================== HERRAMIENTAS ======================== -->
-
+    <div class="container-fluid">
     <div class="container" id="tool">
-     <div class="container-fluid">
+
          <center><strong><h1 id="tool">Herramientas</h1></strong></center>
          <hr>
          <p id="subtitulo">En esta seccion se encuentra una descripcion de la herramientas utilizadas en el curso:</p>
@@ -433,8 +435,8 @@
 
     <div class="container" id="doc">
 
-      <center><h1>Documententación</h1></center>
-      <hr class="divider">
+      <center><h1>Documentación</h1></center>
+      <hr>
       <!-- Projects Row -->
       <div class="row">
           <div class="col-md-4 portfolio-item">
@@ -462,7 +464,7 @@
               <h3>
                   <a href="#">Desarrollo en el Reuso</a>
               </h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+              <p>Desarrollar software pensando en su reutilizacion requiere un nuevo enfoque, el cual involucra pensar en el programa de forma modular, a la vez que este sea parte de un super-sistema. La metodologia expuesta entrega varias ventajas.</p>
           </div>
       </div>
       <!-- /.row -->
@@ -484,7 +486,7 @@
               <h3>
                   <a href="#">Desarrollo Basado en Componentes</a>
               </h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+              <p>Se basa en el desarrollo de partes tal como se hace en las empresas manufactureras, para luego ensamblar esas partes en una etapa siguiente. La finalidad es ahorrar tiempo al tener los módulos desarrollados con anterioridad.</p>
           </div>
       </div>
     </div>
@@ -497,9 +499,11 @@
         <!-- Introduction Row -->
         <div class="row">
             <div class="col-lg-12">
+
                 <h1 class="page-header" align="center">Sobre nosotros
                     <small align="center">¡Este es nuestro equipo!</small>
                 </h1>
+              
                 <p align="center">Nuestro equipo está conformado por un jefe de proyecto y cuatro desarrolladores:</p>
             </div>
         </div>
@@ -508,48 +512,48 @@
         <div class="row">
         <br>
             <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" src="https://maxcdn.icons8.com/Share/icon/Users//user_male_circle_filled1600.png" style="width:200px;height:200px" alt="">
+                <img class="img-circle img-responsive img-centerk" src="img/male.png" style="width:200px;height:200px" alt="">
                 <h3>Pablo Melendez 
                     <small>Jefe de proyecto</small>
                 </h3>
-                <p><img src="http://www.free-icons-download.net/images/google-gmail-logo-icon-24576.png" style="float:center;height:25px;width:25px"> pablomelendez.wd@gmail.com  </p>
-                <p><img src="http://orig03.deviantart.net/6873/f/2013/031/c/d/github_by_ovilia1024-d5teqdd.png" style="float:center;height:25px;width:25px"> <a href="https://github.com/pabloMldzDvlpr">https://www.github.com/pabloMldzDvlpr</a></p><br> 
+                <p><img src="img/gmail.png" style="float:center;height:25px;width:25px"> pablomelendez.wd@gmail.com  </p>
+                <p><img src="img/githubicon.png" style="float:center;height:25px;width:25px"> <a href="https://github.com/pabloMldzDvlpr">https://www.github.com/pabloMldzDvlpr</a></p><br> 
             </div>
 
             <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" src="https://maxcdn.icons8.com/Share/icon/Users//user_male_circle_filled1600.png" style="width:200px;height:200px" alt="">
+                <img class="img-circle img-responsive img-centerk" src="img/male.png" style="width:200px;height:200px" alt="">
                 <h3>Carlos Vernal
                     <small>Desarrollador</small>
                 </h3>
-                <p><img src="http://www.free-icons-download.net/images/google-gmail-logo-icon-24576.png" style="float:center;height:25px;width:25px"> carlos.vernal.navarrete@gmail.com  </p>     
-                <p><img src="http://orig03.deviantart.net/6873/f/2013/031/c/d/github_by_ovilia1024-d5teqdd.png" style="float:center;height:25px;width:25px"> <a href="https://github.com/CarlosVernal">https://www.github.com/CarlosVernal</a></p><br> 
+                <p><img src="img/gmail.png" style="float:center;height:25px;width:25px"> carlos.vernal.navarrete@gmail.com  </p>     
+                <p><img src="img/githubicon.png" style="float:center;height:25px;width:25px"> <a href="https://github.com/CarlosVernal">https://www.github.com/CarlosVernal</a></p><br> 
             </div>
 
             <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" src="https://maxcdn.icons8.com/Share/icon/Users//user_male_circle_filled1600.png" style="width:200px;height:200px" alt="">
+                <img class="img-circle img-responsive img-centerk" src="img/male.png" style="width:200px;height:200px" alt="">
                 <h3>Alexis Rodriguez
                     <small>Desarrollador</small>
                 </h3>
-                <p><img src="http://www.free-icons-download.net/images/google-gmail-logo-icon-24576.png" style="float:center;height:25px;width:25px">  alecsarroa@gmail.com  </p>     
-                <p><img src="http://orig03.deviantart.net/6873/f/2013/031/c/d/github_by_ovilia1024-d5teqdd.png" style="float:center;height:25px;width:25px"> <a href="https://github.com/zahard25">https://www.github.com/zahard25</a></p><br>     
+                <p><img src="img/gmail.png" style="float:center;height:25px;width:25px">  alecsarroa@gmail.com  </p>     
+                <p><img src="img/githubicon.png" style="float:center;height:25px;width:25px"> <a href="https://github.com/zahard25">https://www.github.com/zahard25</a></p><br>     
             </div>
             <br>
             <div class="col-md-4 col-md-offset-2 text-center">
-                <img class="img-circle img-responsive img-center" src="https://maxcdn.icons8.com/Share/icon/Users//user_male_circle_filled1600.png" style="width:200px;height:200px" alt="">
+                <img class="img-circle img-responsive img-centerk" src="img/male.png" style="width:200px;height:200px" alt="">
                 <h3>Manuel Henríquez
                     <small>Desarrollador</small>
                 </h3>
-                <p><img src="http://www.free-icons-download.net/images/google-gmail-logo-icon-24576.png" style="float:center;height:25px;width:25px">  h3nryquez@gmail.com   </p>  
-                <p><img src="http://orig03.deviantart.net/6873/f/2013/031/c/d/github_by_ovilia1024-d5teqdd.png" style="float:center;height:25px;width:25px"> <a href="https://github.com/LastPlatypus">https://www.github.com/LastPlatypus</a></p><br>   
+                <p><img src="img/gmail.png" style="float:center;height:25px;width:25px">  h3nryquez@gmail.com   </p>  
+                <p><img src="img/githubicon.png" style="float:center;height:25px;width:25px"> <a href="https://github.com/LastPlatypus">https://www.github.com/LastPlatypus</a></p><br>   
             </div>
 
             <div class="col-md-4 text-center">
-               <img class="img-circle img-responsive img-center" src="https://cdn1.iconfinder.com/data/icons/social-messaging-productivity-1-1/128/gender-female2-512.png" style="width:200px;height:200px" alt="">
+               <img class="img-circle img-responsive img-centerk" src="img/female.png" style="width:200px;height:200px" alt="">
                 <h3>Karina Páez
                     <small>Desarrollador</small>
                 </h3>
-                <p><img src="http://www.free-icons-download.net/images/google-gmail-logo-icon-24576.png" style="float:center;height:25px;width:25px">  k.paez31@gmail.com  </p>     
-                <p><img src="http://orig03.deviantart.net/6873/f/2013/031/c/d/github_by_ovilia1024-d5teqdd.png" style="float:center;height:25px;width:25px"> <a href="https://github.com/karinapaez">https://www.github.com/karinapaez</a></p><br>  
+                <p><img src="img/gmail.png" style="float:center;height:25px;width:25px">  k.paez31@gmail.com  </p>     
+                <p><img src="img/githubicon.png" style="float:center;height:25px;width:25px"> <a href="https://github.com/karinapaez">https://www.github.com/karinapaez</a></p><br>  
             </div>   
         </div>
         <hr>
